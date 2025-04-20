@@ -31,6 +31,14 @@ input[type="email"] {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
+function validateEmail(email) {
+    // Basic email validation (you might want to use a more robust library)
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+</script>
+
+</body>
     border-radius: 3px;
 }
 
@@ -69,12 +77,4 @@ function redirectToProduct() {
     }
 }
 
-function validateEmail(email) {
-    // Basic email validation (you might want to use a more robust library)
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
-</script>
-
-</body>
 </html>
